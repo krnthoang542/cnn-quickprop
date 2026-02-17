@@ -121,7 +121,7 @@ TensorFlow tính gradient cho Conv2D thông qua các phép toán sau:
    ```
    
    Công thức:
-   $$\frac{\partial L}{\partial X} = \texttt{Conv2D_Transpose}\left(\frac{\partial L}{\partial Y}, W\right)$$
+   $$\frac{\partial L}{\partial X} = \texttt{Conv2DTranspose}\left(\frac{\partial L}{\partial Y}, W\right)$$
 
 **Triển Khai Trong TensorFlow:**
 
@@ -407,7 +407,7 @@ Nếu không thỏa điều kiện, QuickProp sẽ fallback về **Gradient Desc
 
 Để tránh bước nhảy quá lớn và mất ổn định, QuickProp sử dụng tham số `max_growth`:
 
-$$|\Delta w_t| \leq \texttt{max\_growth} \times |\Delta w_{t-1}|$$
+$$|\Delta w_t| \leq \texttt{maxgrowth} \times |\Delta w_{t-1}|$$
 
 Giá trị mặc định `max_growth = 1.75` đảm bảo bước nhảy hiện tại không lớn hơn 1.75 lần bước nhảy trước đó.
 
