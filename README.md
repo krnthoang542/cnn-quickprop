@@ -121,7 +121,7 @@ TensorFlow tính gradient cho Conv2D thông qua các phép toán sau:
    ```
    
    Công thức:
-   $$\frac{\partial L}{\partial X} = \texttt{Conv2D\_Transpose}\left(\frac{\partial L}{\partial Y}, W\right)$$
+   $$\frac{\partial L}{\partial X} = \texttt{Conv2D_Transpose}\left(\frac{\partial L}{\partial Y}, W\right)$$
 
 **Triển Khai Trong TensorFlow:**
 
